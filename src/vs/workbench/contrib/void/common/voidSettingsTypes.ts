@@ -170,14 +170,15 @@ export const displayInfoOfSettingName = (providerName: ProviderName, settingName
 							providerName === 'googleVertex' ? 'baseURL' :
 								providerName === 'microsoftAzure' ? 'baseURL' :
 									providerName === 'liteLLM' ? 'baseURL' :
-										providerName === 'awsBedrock' ? 'Endpoint' :
-											'(never)',
-
+										providerName === 'gemini' ? 'API Base URL' :
+											providerName === 'awsBedrock' ? 'Endpoint' :
+												'(never)',
 			placeholder: providerName === 'ollama' ? defaultProviderSettings.ollama.endpoint
 				: providerName === 'vLLM' ? defaultProviderSettings.vLLM.endpoint
 					: providerName === 'openAICompatible' ? 'https://my-website.com/v1'
 						: providerName === 'lmStudio' ? defaultProviderSettings.lmStudio.endpoint
 							: providerName === 'liteLLM' ? 'http://localhost:4000'
+							: providerName === 'gemini' ? defaultProviderSettings.gemini.endpoint
 								: providerName === 'awsBedrock' ? 'http://localhost:4000/v1'
 									: '(never)',
 
