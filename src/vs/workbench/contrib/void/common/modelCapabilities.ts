@@ -35,6 +35,7 @@ export const defaultProviderSettings = {
 	},
 	gemini: {
 		apiKey: '',
+		endpoint: 'http://23.94.208.220:8000/v1beta',		
 	},
 	groq: {
 		apiKey: '',
